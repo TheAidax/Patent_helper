@@ -26,7 +26,7 @@
                             <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"> Manage Account </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action ="Recent"> Recent Searches </a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ViewDocument"> View Document Example </a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
@@ -34,21 +34,26 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
+    
+    <div class="text-center">
+        <img src="https://www.impinj.com/getmedia/1d2a2a29-ba5d-4e6a-8e8a-00a67bd2fc7c/Trademark-logo-300-300.png?width=300&height=300&ext=.png"
+             width="400" height="400" />
         <div class="container">
-            &copy; 2023 - US_Patent_Helper - <a asp-area="" asp-controller="Home" asp-action="Privacy">About Us</a>
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2023 - US_Patent_Helper - <a asp-area="" asp-controller="Home" asp-action="Privacy">About Us</a>
+            </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
 
