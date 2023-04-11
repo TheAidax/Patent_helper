@@ -14,6 +14,9 @@
     <None Remove="Views\Home\images\" />
     <None Remove="Views\Document\" />
     <None Remove="Patent_compare_v2\" />
+    <None Remove="comparisonTesting.py" />
+    <None Remove="pdf2txt.py" />
+    <None Remove="cleanup.py" />
   </ItemGroup>
   <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
@@ -40,5 +43,8 @@
     <Folder Include="Views\Home\images\" />
     <Folder Include="Views\Document\" />
     <Folder Include="Patent_compare_v2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ImportedCompare.cs" />
   </ItemGroup>
 </Project>
