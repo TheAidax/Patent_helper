@@ -14,7 +14,6 @@
     <None Remove="Views\Home\images\" />
     <None Remove="Views\Document\" />
     <None Remove="Patent_compare_v2\" />
-    <None Remove="Patent_compare_v2\compare.py" />
   </ItemGroup>
   <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
@@ -32,6 +31,8 @@
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.0" />
     <PackageReference Include="Microsoft.Extensions.Caching.SqlServer" Version="7.0.4" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="IronPython" Version="3.4.0" />
+    <PackageReference Include="IronPython.StdLib" Version="3.4.0" />
   </ItemGroup>
 
   <ItemGroup>
