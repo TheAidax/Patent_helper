@@ -3,9 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using US_Patent_Helper.Models;
 using System.Linq;
 using System.Web;
-
-
+using Microsoft.AspNetCore.Authorization;
 namespace US_Patent_Helper.Controllers;
+
+
 
 public class HomeController : Controller
 {
@@ -16,6 +17,7 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+    [Authorize]
     public IActionResult Index()
     {
        /* String path = Server.MapPath("~/images/");
@@ -45,11 +47,12 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult About()
     {
         return View();
     }
 
+    [Authorize]
     public IActionResult ViewDocument()
     {
         return View();
