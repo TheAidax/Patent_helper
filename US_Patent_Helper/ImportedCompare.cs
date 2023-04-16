@@ -1,5 +1,3 @@
-﻿
-using System;
 using System;
 using IronPython.Hosting;
 using IronPython.Runtime;
