@@ -11,6 +11,12 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
     <None Remove="Data\Migrations\" />
+    <None Remove="Views\Home\images\" />
+    <None Remove="Views\Document\" />
+    <None Remove="Patent_compare_v2\" />
+    <None Remove="comparisonTesting.py" />
+    <None Remove="pdf2txt.py" />
+    <None Remove="cleanup.py" />
   </ItemGroup>
   <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
@@ -28,9 +34,17 @@
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.0" />
     <PackageReference Include="Microsoft.Extensions.Caching.SqlServer" Version="7.0.4" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="IronPython" Version="3.4.0" />
+    <PackageReference Include="IronPython.StdLib" Version="3.4.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Data\Migrations\" />
+    <Folder Include="Views\Home\images\" />
+    <Folder Include="Views\Document\" />
+    <Folder Include="Patent_compare_v2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ImportedCompare.cs" />
   </ItemGroup>
 </Project>

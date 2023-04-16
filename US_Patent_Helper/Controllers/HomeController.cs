@@ -1,8 +1,12 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using US_Patent_Helper.Models;
-
+using System.Linq;
+using System.Web;
+using Microsoft.AspNetCore.Authorization;
 namespace US_Patent_Helper.Controllers;
+
+
 
 public class HomeController : Controller
 {
@@ -13,12 +17,43 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+    [Authorize]
     public IActionResult Index()
+    {
+       /* String path = Server.MapPath("~/images/");
+        String[] imagesfiles = Directory.GetFiles(path);
+        ViewBag.images = imagesfiles; 
+
+             @foreach(var file in ViewBag.images)
+{ 
+                <img src ="~/images/@Path.GetFileName(file)"/>
+} */
+
+        /* 
+         * Giannis
+         * Middleton
+         * Lopez
+         * Matthews
+         * Holiday
+         * Thanansis
+         * Connington
+         * Portis
+         * WHite boy from Utah
+         * Jevon Carter
+         * Shooter w dreads that played for the CEltics a few years ago
+         * Greyson Allen
+         */
+
+        return View();
+    }
+
+    public IActionResult About()
     {
         return View();
     }
 
-    public IActionResult Privacy()
+    [Authorize]
+    public IActionResult ViewDocument()
     {
         return View();
     }
