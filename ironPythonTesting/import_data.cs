@@ -2,16 +2,22 @@
 using IronPython.Hosting;
 
 
+
 public class ImportPythonData
 {
+
+
+   
 
     public int ImportData()
     {
         // new PythonTuple(new[] { 1, 2, 3 }); // Use to construct python tuple in csharp
 
 
-/*
+
         var engine = Python.CreateEngine();
+/*
+        
 
         var searchPaths = engine.GetSearchPaths();
         searchPaths.Add(@"path");
@@ -48,6 +54,19 @@ public class ImportPythonData
 
         return 0;
     }
+
+
+     static void Main(){
+
+        var i = new ImportPythonData();
+        i.ImportData();
+    }
+
+
+   
 }
+
+
+
 
 
