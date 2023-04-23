@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+    <title> Patent Helper</title>
+</head>
+
+<body>
+    <div class="text-center">
+        <h1 class="display-4">Welcome to Patent Helper</h1>
+        <img src="https://www.impinj.com/getmedia/1d2a2a29-ba5d-4e6a-8e8a-00a67bd2fc7c/Trademark-logo-300-300.png?width=300&height=300&ext=.png"
+             width="400" height="400" />
+
+        <details>
+            <summary> To get started upload your document below </summary>
+            <form id="Uploadform">
+                <br />
+                <label for="uploaded"> Click to upload </label>
+                <input type="file" required id="uploaded" />
+                <button type="submit" id="submission"> Submit </button>
+            </form>
+        </details>
+
+    </div>
+    <div id="pspdfkit" style="width: 100%; height: 100vh;"></div>
+
+    <div>
+
+   
+    </div>
+</body>
+<script>
+
+    console.log("Hello tee hee")
+    let form = document.getElementById("Uploadform");
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        //let username = document.getElementById("username");
+
+        let file = document.getElementById("uploaded");
+        if (file == null) {
+            alert("Ay man no form was submitted");
+        } else {
+            alert("This form has been successfully submitted!");
+            console.log("This form is trash");
+            }
+
+        }
+    });
+</script>
+<script src="/lib/pspdfkit.js"></script>
+<script>PSPDFKit.load({
+        container: "#pspdfkit",
+        document: "document.pdf",
+    })
+        .then(function (instance) {
+            console.log("PSPDFKit loaded", instance);
+        })
+        .catch(function (error) {
+            console.error(error.message);
+        });</script>
+
+
+
