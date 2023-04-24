@@ -7,9 +7,11 @@
     <UserSecretsId>aspnet-US_Patent_Helper-04be687a-37a9-497b-b007-4e4dd8a3fe42</UserSecretsId>
   </PropertyGroup>
 
-  <PropertyGroup Condition="" />
-  <PropertyGroup Condition="" />
+  <PropertyGroup />
+  <PropertyGroup />
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
     <None Remove="Data\Migrations\" />
     <None Remove="Views\Home\images\" />
