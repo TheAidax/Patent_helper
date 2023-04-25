@@ -35,13 +35,14 @@
         </nav>
     </header>
 
+    <img class="bg-Image" src="https://wallpapertag.com/wallpaper/full/1/a/1/350829-widescreen-website-background-1920x1080-windows-xp.jpg" alt="Image not shown" />
+
     
-    <div class="text-center">    
-        <div class="container">
+    <div class="container">
             <main role="main" class="pb-3">
                 @RenderBody()
             </main>
-        </div>
+    </div>
 
         <footer class="border-top footer text-muted">
             <div class="container">
@@ -54,4 +55,35 @@
         @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+<style>
+    .bg-image {
+        /* The image used */
+        /* Add the blur effect */
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+        /* Full height */
+        height: 100%;
+  
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .text-center {
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        border: 3px solid #f1f1f1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+    }
+</style>
 
