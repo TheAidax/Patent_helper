@@ -1,0 +1,15 @@
+C:\Users\syedr\OneDrive\Desktop\HackPy\RunPythonThruThis\bin\Debug\net6.0\RunPythonThruThis.exe
+C:\Users\syedr\OneDrive\Desktop\HackPy\RunPythonThruThis\bin\Debug\net6.0\RunPythonThruThis.deps.json
+C:\Users\syedr\OneDrive\Desktop\HackPy\RunPythonThruThis\bin\Debug\net6.0\RunPythonThruThis.runtimeconfig.json
+C:\Users\syedr\OneDrive\Desktop\HackPy\RunPythonThruThis\bin\Debug\net6.0\RunPythonThruThis.dll
+C:\Users\syedr\OneDrive\Desktop\HackPy\RunPythonThruThis\bin\Debug\net6.0\RunPythonThruThis.pdb
+C:\Users\syedr\OneDrive\Desktop\HackPy\RunPythonThruThis\obj\Debug\net6.0\RunPythonThruThis.csproj.AssemblyReference.cache
+C:\Users\syedr\OneDrive\Desktop\HackPy\RunPythonThruThis\obj\Debug\net6.0\RunPythonThruThis.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\syedr\OneDrive\Desktop\HackPy\RunPythonThruThis\obj\Debug\net6.0\RunPythonThruThis.AssemblyInfoInputs.cache
+C:\Users\syedr\OneDrive\Desktop\HackPy\RunPythonThruThis\obj\Debug\net6.0\RunPythonThruThis.AssemblyInfo.cs
+C:\Users\syedr\OneDrive\Desktop\HackPy\RunPythonThruThis\obj\Debug\net6.0\RunPythonThruThis.csproj.CoreCompileInputs.cache
+C:\Users\syedr\OneDrive\Desktop\HackPy\RunPythonThruThis\obj\Debug\net6.0\RunPythonThruThis.dll
+C:\Users\syedr\OneDrive\Desktop\HackPy\RunPythonThruThis\obj\Debug\net6.0\refint\RunPythonThruThis.dll
+C:\Users\syedr\OneDrive\Desktop\HackPy\RunPythonThruThis\obj\Debug\net6.0\RunPythonThruThis.pdb
+C:\Users\syedr\OneDrive\Desktop\HackPy\RunPythonThruThis\obj\Debug\net6.0\RunPythonThruThis.genruntimeconfig.cache
+C:\Users\syedr\OneDrive\Desktop\HackPy\RunPythonThruThis\obj\Debug\net6.0\ref\RunPythonThruThis.dll
