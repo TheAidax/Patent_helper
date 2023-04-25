@@ -11,30 +11,6 @@ def makingTuples():
     openParent = open(pathToParent,"r")
     openCIP = open(pathToCIP,"r")
 
-######       Use these if you wanna debug       #######
-    #pathToParent = open("test1.txt","r")
-    #pathToCIP = open("test2.txt","r")
-
-    #openParent = pathToParent
-    #openCIP = pathToCIP
-
-
-
-
-    #global listoftuples
-    #global listforlist
-    
-    #global linestatus           #can be either: new, deleted, or common
-    #global similarityratio
-    
-    #global commonlinenum        #for highlighting deleted matter   (purple)
-    #global ciplinenum           #for highlighting new matter       ( blue )
-    
-
-
-
-
-    #global flag
 
     parent_data = openParent.readline()
     CIP_data = openCIP.readline()
