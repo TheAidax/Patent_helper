@@ -8,7 +8,7 @@ namespace RunPythonFromCS {
         static void Main(string[] args)
         {
             Console.WriteLine("Execute python process...");
-            ExecProcess2();
+            createTuples();
         }
 
         /*
