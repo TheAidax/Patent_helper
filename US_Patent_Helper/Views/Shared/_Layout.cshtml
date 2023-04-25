@@ -10,7 +10,7 @@
 </head>
 <body style="background-color:whitesmoke">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-lg navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color: darkblue">
             <div class="container-fluid">
                 <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">US Patent Helper</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -35,13 +35,16 @@
         </nav>
     </header>
 
-    
-    <div class="text-center">    
+    <img class="bg-Image" src="https://wallpapertag.com/wallpaper/full/1/a/1/350829-widescreen-website-background-1920x1080-windows-xp.jpg" alt="Image not shown" />
+
+    <div class="text-center">
         <div class="container">
             <main role="main" class="pb-3">
                 @RenderBody()
             </main>
         </div>
+    </div>
+   
 
         <footer class="border-top footer text-muted">
             <div class="container">
@@ -54,4 +57,32 @@
         @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+<style>
+    .bg-image {
+        /* The image used */
+        /* Add the blur effect */
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+        /* Full height */
+        height: 100%;
+  
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .text-center {
+        color: darkblue;
+        font-weight: bold;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        z-index: 2;
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+    }
+</style>
 
