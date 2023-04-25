@@ -10,7 +10,7 @@
 </head>
 <body style="background-color:whitesmoke">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-lg navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color: darkblue">
             <div class="container-fluid">
                 <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">US Patent Helper</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -37,12 +37,14 @@
 
     <img class="bg-Image" src="https://wallpapertag.com/wallpaper/full/1/a/1/350829-widescreen-website-background-1920x1080-windows-xp.jpg" alt="Image not shown" />
 
-    
-    <div class="container">
+    <div class="text-center">
+        <div class="container">
             <main role="main" class="pb-3">
                 @RenderBody()
             </main>
+        </div>
     </div>
+   
 
         <footer class="border-top footer text-muted">
             <div class="container">
@@ -71,15 +73,12 @@
     }
 
     .text-center {
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-        color: white;
+        color: darkblue;
         font-weight: bold;
-        border: 3px solid #f1f1f1;
         position: absolute;
-        top: 50%;
+        top: 30%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -30%);
         z-index: 2;
         width: 80%;
         padding: 20px;
