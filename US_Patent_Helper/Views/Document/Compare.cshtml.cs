@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+    
 
 namespace US_Patent_Helper.Views.Document
 {
@@ -13,10 +14,14 @@ namespace US_Patent_Helper.Views.Document
         {
         }
 
-        public void OnClick()
+
+      //  [WebMethod]
+        public static void MyFunction()
         {
-            Console.WriteLine("Button Clicked");
-     
+            
         }
+
     }
+
 }
+
