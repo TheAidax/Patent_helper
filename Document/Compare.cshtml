@@ -1,0 +1,24 @@
+﻿@page
+@model US_Patent_Helper.Views.Document.CompareModel
+@{
+}
+
+<h1> Document Comparison </h1>
+
+<br />
+<br />
+
+<form>
+    <h4> Enter the files you would like to compare: </h4>
+
+    <label for="ParentDoc"> Upload parent document </label>
+    <input type="file" id="parentDoc" required />
+
+    <label for="File2"> Upload the CIP </label>
+    <input type="file" id="cip" required />
+    <button type="submit" runat="server" onclick="OnClick()"> Submit </button>
+</form>
+
+<script>function ComparisonFunction() {
+        console.log("Submission recieved!");
+    }</script>
