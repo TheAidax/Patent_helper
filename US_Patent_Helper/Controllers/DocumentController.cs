@@ -12,12 +12,12 @@ using static IronPython.Modules._ast;
 
 namespace US_Patent_Helper.Controllers
 {
-	public class DocumentController :Controller
-	{
+    public class DocumentController : Controller
+    {
         private readonly Microsoft.AspNetCore.Hosting.IHostingEnvironment _hostingEnvironment;
         [HttpGet]
-		public ActionResult Document()
-		{
+        public ActionResult Document()
+        {
             return View();
         }
 
@@ -61,4 +61,3 @@ namespace US_Patent_Helper.Controllers
 		
     }
 }
-
