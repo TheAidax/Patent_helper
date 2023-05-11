@@ -10,11 +10,32 @@
 
     <div class="text-center">
         <h1 class="display-4">Welcome to Patent Helper</h1>
-        <img src="https://www.impinj.com/getmedia/1d2a2a29-ba5d-4e6a-8e8a-00a67bd2fc7c/Trademark-logo-300-300.png?width=300&height=300&ext=.png"
-             width="400" height="400" />
+       <p> Place the image at line 13</p>
         <br />
         <h6>To get started Click <a href="~/Document/Compare"> Here</a> </h6> 
     </div>
+
+    <br />
+    <br />
+    <br />
+    <h2> Here is some tester stuff BEWARE: </h2>                        
+    <br />
+    <input type="button" id='script' name="scriptbutton" value=" Run Script " onclick="goPython()">
+
+    <img src="https://www.impinj.com/getmedia/1d2a2a29-ba5d-4e6a-8e8a-00a67bd2fc7c/Trademark-logo-300-300.png?width=300&height=300&ext=.png"
+         width="400" height="400" />
+                                                                                                                                                                                                                 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        function goPython(){
+            $.ajax({
+                url: "C:\\Users\\syedr\\source\\repos\\Patent_helper\\US_Patent_Helper\\AJAX\\server.py",
+             context: document.body
+            }).done(function() {
+             alert('finished python script');;
+            });
+        }
+    </script>
 
 </body>
 

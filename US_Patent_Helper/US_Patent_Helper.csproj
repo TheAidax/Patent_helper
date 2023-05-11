@@ -47,7 +47,6 @@
     <Folder Include="Data\Migrations\" />
     <Folder Include="Views\Home\images\" />
     <Folder Include="Views\Document\" />
-    <Folder Include="Patent_compare_v2\" />
     <Folder Include="wwwroot\lib\dist\" />
     <Folder Include="wwwroot\PatentTxtFiles\" />
   </ItemGroup>
