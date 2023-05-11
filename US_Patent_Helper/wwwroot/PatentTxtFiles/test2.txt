@@ -1,0 +1,17 @@
+Copyright (c) Intel Corporation.
+
+This iCLS Client ("Software") is furnished under license and may only be used
+or copied in accordance with the terms of that license. No license, express or
+implied, by estoppel or otherwise, to any intellectual property rights is
+THIS IS A NEW LINE
+AND THIS TOO 
+granted by this document. The Software is subject to change without notice,
+and should not be construed as a commitment by Intel Corporation to market,
+license, sell or support any product or technology. Unless otherwise provided
+for in the license under which this Software is provided, the Software is
+WOAH WOAH This wasn't in the original 
+WTF is going on??
+provided AS IS, with no warranties of any kind, express or implied. Except
+as expressly permitted by the Software license, neither Intel Corporation nor
+a retrieval system, transmitted in any form, or distributed by any means
+without the express written consent of Intel Corporation.
