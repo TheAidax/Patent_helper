@@ -1,24 +1,167 @@
 ﻿@page
 @model US_Patent_Helper.Views.Document.CompareModel
 @{
+
 }
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">google.charts.load('current', { 'packages': ['corechart'] });
+        //This is the code to render the pie chart
+        google.charts.setOnLoadCallback(drawChart);
+        //console.log("The code is running")
+        //This is my code
+        function CountLines(results) {
+            let numCommon = 0;
+            let numNew = 0;
+            let numDeleted = 0;
+  
+            var lineNumbers = [];
+            var row = 0;
+         
+
+            for (let row = 0; row < results.length; row++) {
+                if (results[row][0] == 'common') {
+                    numCommon += 1;
+
+                } else if (results[row][0] == 'new') {
+                    numNew += 1;
+
+                } else if (results[row][0] == 'deleted') {
+                    numDeleted += 1;
+                }
+            }
+
+
+
+            lineNumbers.push(numCommon);
+            lineNumbers.push(numNew);
+            lineNumbers.push(numDeleted);
+
+        return lineNumbers;
+        }  
+
+
+            // This is where my code ends
+
+            function drawChart() {
+                const results = ['new', 1.0, 1];
+
+
+                var data = [
+                    ['common', 1.0, 1],
+                    ['new', 1.0, 2],
+                    ['deleted', 0.5, 3],
+                    ['common', 1.0, 1],
+                    ['new', 1.0, 2],
+                    ['deleted', 0.5, 3],
+                    ['common', 1.0, 1],
+                    ['new', 1.0, 2],
+                    ['deleted', 0.5, 3],
+                    ['common', 1.0, 1],
+                    ['new', 1.0, 2],
+                    ['deleted', 0.5, 3]
+                ];
+
+                CountArray = CountLines(data);
+                console.log("This is the results of CountArray: " + CountArray);
+                //var CommonCount = CountArray[0]
+                //var NewCount = CountArray[1]
+                //var DeletedCount = CountArray[2]
+
+
+                var data = google.visualization.arrayToDataTable([
+                    ['Commonality', '# of Lines'],
+                    ['Common Matter', CountArray[0]],
+                    ['New Matter', CountArray[1]],
+                    ['Deleted Matter', CountArray[2]]
+                ]);
+
+                var options = {
+                    title: '% of Common, New and Deleted Matter'
+                };
+
+                var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                chart.draw(data, options);
+            }
+
+    </script>
+</head>
 
 <h1> Document Comparison </h1>
-
 <br />
 <br />
 
 <form>
-    <h4> Enter the files you would like to compare: </h4>
-
-    <label for="ParentDoc"> Upload parent document </label>
-    <input type="file" id="parentDoc" required />
-
-    <label for="File2"> Upload the CIP </label>
-    <input type="file" id="cip" required />
-    <button type="submit" runat="server" onclick="OnClick()"> Submit </button>
+<h4> Enter the files you would like to compare: </h4>
+<label for="ParentDoc"> Upload parent document </label>
+<input type="file" id="parentDoc" required />
+<label for="File2"> Upload the CIP </label>
+<input type="file" id="cip" required />
+<button type="submit" runat="server" onclick="Clicked()"id="Submit">
+    Upload
+</button>
 </form>
 
-<script>function ComparisonFunction() {
-        console.log("Submission recieved!");
-    }</script>
+
+<!--   
+    uhuh uhuh uhuh uhuh uh, yeah    
+-->
+
+<h3> Results: </h3>
+
+
+
+<div style="height: 500px; width: 500px; border: solid; float: left;" >
+    <p id="TextResults"></p>
+</div>
+
+<div style="height: 500px; width: 500px; border: solid; float: left;">
+    <p id="TextResults2"></p>
+</div>
+
+<br />
+<br />
+<details>
+    <summary>Click to see the data represented in a pie chart below!</summary>
+    <div id="piechart" style="width: 300px; height: 300px;"></div>
+</details>
+
+
+<script>
+    // Select the file input element
+    const fileInput = document.getElementById('parentDoc');
+    const fileInput2 = document.getElementById('cip');
+
+    // Add an event listener for when a file is selected
+    fileInput.addEventListener('change', () => {
+        // Create a new FileReader object
+        const reader = new FileReader();
+
+        // Define a callback function to be executed when the file is loaded
+        reader.onload = () => {
+            // Access the contents of the file as a string
+            const fileContents = reader.result;
+            console.log(fileContents);
+            document.getElementById("TextResults").innerHTML = fileContents;
+        };
+
+        // Read the file as text
+        reader.readAsText(fileInput.files[0]);
+    });
+
+    // Add an event listener for when a file is selected
+    fileInput2.addEventListener('change', () => {
+        // Create a new FileReader object
+        const reader2 = new FileReader();
+
+        // Define a callback function to be executed when the file is loaded
+        reader2.onload = () => {
+            // Access the contents of the file as a string
+            const fileContents2 = reader2.result;
+            document.getElementById("TextResults2").innerHTML = fileContents2;
+        };
+
+        // Read the file as text
+        reader2.readAsText(fileInput2.files[0]);
+    });
+</script>

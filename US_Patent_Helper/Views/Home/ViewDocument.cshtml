@@ -2,7 +2,11 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+
 }
+
+
+
 <div class="text-center">
     <h1> Here is a Text View Example </h1>
     <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
@@ -33,8 +37,23 @@
     <a href="">Click here to compare!</a>
 </div>
 
+<p> This should display a Txt file for the petnep</p>
 
+@{
+    /*string path = 
+    var dataFile = Directory.GetFiles(@"~/App_Data/Persons.txt;");
+    Array userData = File.ReadAllLines(dataFile);
+}
 
+@foreach (string dataLine in userData)
+{
+    foreach (string dataItem in dataLine.Split(','))
+    {
+        @dataItem <text>&nbsp;</text>}
+    <br>
+    */
+    
+} 
 
 
 
@@ -45,82 +64,80 @@
         direction: ltr;
     }
 </style>
-<script>
+<script>// If absolute URL from the remote server is provided, configure the CORS
+    // header on that server.
+    var url = 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf';
 
-// If absolute URL from the remote server is provided, configure the CORS
-// header on that server.
-var url = 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf';
+    // Loaded via <script> tag, create shortcut to access PDF.js exports.
+    var pdfjsLib = window['pdfjs-dist/build/pdf'];
 
-// Loaded via <script> tag, create shortcut to access PDF.js exports.
-var pdfjsLib = window['pdfjs-dist/build/pdf'];
+    // The workerSrc property shall be specified.
+    pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
 
-// The workerSrc property shall be specified.
-pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
+    var pdfDoc = null,
+        pageNum = 1,
+        pageRendering = false,
+        pageNumPending = null,
+        scale = 0.8,
+        canvas = document.getElementById('the-canvas'),
+        ctx = canvas.getContext('2d');
 
-var pdfDoc = null,
-    pageNum = 1,
-    pageRendering = false,
-    pageNumPending = null,
-    scale = 0.8,
-    canvas = document.getElementById('the-canvas'),
-    ctx = canvas.getContext('2d');
+    /**
+     * Get page info from document, resize canvas accordingly, and render page.
+     * param num Page number.
+     */
+    /*
+   function renderPage(num) {
+     pageRendering = true;
+     // Using promise to fetch the page
+     pdfDoc.getPage(num).then(function(page) {
+       var viewport = page.getViewport({scale: scale});
+       canvas.height = viewport.height;
+       canvas.width = viewport.width;
 
-/**
- * Get page info from document, resize canvas accordingly, and render page.
- * param num Page number.
- */
- /*
-function renderPage(num) {
-  pageRendering = true;
-  // Using promise to fetch the page
-  pdfDoc.getPage(num).then(function(page) {
-    var viewport = page.getViewport({scale: scale});
-    canvas.height = viewport.height;
-    canvas.width = viewport.width;
+       // Render PDF page into canvas context
+       var renderContext = {
+         canvasContext: ctx,
+         viewport: viewport
+       };
+       var renderTask = page.render(renderContext);
 
-    // Render PDF page into canvas context
-    var renderContext = {
-      canvasContext: ctx,
-      viewport: viewport
-    };
-    var renderTask = page.render(renderContext);
+       // Wait for rendering to finish
+       renderTask.promise.then(function() {
+         pageRendering = false;
+         if (pageNumPending !== null) {
+           // New page rendering is pending
+           renderPage(pageNumPending);
+           pageNumPending = null;
+         }
+       });
+     });
 
-    // Wait for rendering to finish
-    renderTask.promise.then(function() {
-      pageRendering = false;
-      if (pageNumPending !== null) {
-        // New page rendering is pending
-        renderPage(pageNumPending);
-        pageNumPending = null;
-      }
-    });
-  });
-
-  // Update page counters
-  document.getElementById('page_num').textContent = num;
-}
-/**
- * Displays next page.
- */
-
-
-/**
- * Asynchronously downloads PDF.
- */
- /*
-pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
-  pdfDoc = pdfDoc_;
-  document.getElementById('page_count').textContent = pdfDoc.numPages;
-
-  // Initial/first page rendering
-    
-    console.log("You made it this far")
+     // Update page counters
+     document.getElementById('page_num').textContent = num;
+   }
+   /**
+    * Displays next page.
     */
+
+
+    /**
+     * Asynchronously downloads PDF.
+     */
+    /*
+   pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+     pdfDoc = pdfDoc_;
+     document.getElementById('page_count').textContent = pdfDoc.numPages;
+
+     // Initial/first page rendering
+
+       console.log("You made it this far")
+       */
     function renderPDF() {
         var canvas = document.getElementById('the-2nd-canvas');
         var ctx = canvas.getContext('2d');
         renderPage(num);
-        
+
         // Initial/first page rendering
     }
 
@@ -128,6 +145,5 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
         pdfDoc = pdfDoc_;
         document.getElementById('page_count').textContent = pdfDoc.numPages;
         renderPage(pageNum);
-  //  renderPage(pageNum);
-});
-</script>
+        //  renderPage(pageNum);
+    });</script>
