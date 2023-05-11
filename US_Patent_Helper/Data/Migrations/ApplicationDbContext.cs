@@ -10,6 +10,5 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
-    public DbSet<US_Patent_Helper.Models.RubberDuckies> RubberDuckies { get; set; } = default!;
 }
 
